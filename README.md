@@ -1,3 +1,5 @@
+GIFcommit00003
+
 # Layout study 04 — Wikipedia: Golden ratio
 
 **Live:** https://gregoryedgerton.github.io/golden-grids-study-04-wikipedia/
