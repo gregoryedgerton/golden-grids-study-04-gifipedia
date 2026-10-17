@@ -2,7 +2,7 @@ GIFcommit00003
 
 # Layout study 04 — Wikipedia: Golden ratio
 
-**Live:** https://gregoryedgerton.github.io/golden-grids-study-04-wikipedia/
+**Live:** https://gregoryedgerton.github.io/golden-grids-study-04-gifipedia/
 
 An unaffiliated layout study of the Wikipedia article
 [Golden ratio](https://en.wikipedia.org/wiki/Golden_ratio): one long article
@@ -138,3 +138,5 @@ npm run dev
 `npm run build` type-checks and builds the page to `dist/`; pushing to
 `main` deploys to GitHub Pages. The library is consumed from npm at its
 published version.
+
+- **Address (2026-10-17, Greg).** The repository moved from `golden-grids-study-04-wikipedia` to `golden-grids-study-04-gifipedia`, so the reference's name is no longer in the study's web address (a step against the Safe Browsing flag on the shared origin); the old address no longer serves anything.
