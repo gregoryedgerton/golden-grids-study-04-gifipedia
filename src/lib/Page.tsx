@@ -149,10 +149,10 @@ export function Page({ title, standfirst, children }: { title: string; standfirs
             <span className="wordmark__tag">The Free Encyclopedia</span>
           </a>
           <Search />
+          {/* The reference's Create account and Log in are left out: a sign-in
+              label in a brand's header reads as phishing to Safe Browsing. */}
           <ul className="site__links">
             <li><span>Donate</span></li>
-            <li><span>Create account</span></li>
-            <li><span>Log in</span></li>
           </ul>
         </div>
       </header>

@@ -197,3 +197,27 @@ opened in StackBlitz at `https://stackblitz.com/~/github.com/gregoryedgerton/gol
 - Do not append `?file=` to the `~/github.com` link; it made the IDE fail to
   start in testing. The classic `/github/` importer accepts `?file=` but waits
   on a WebSocket and can stall at "Cloning repo from GitHub".
+
+## Safe Browsing remediation (2026-10)
+
+On 2026-10-17 Google Safe Browsing flagged the whole origin,
+gregoryedgerton.github.io, as social engineering: every study and the
+marketing site. The first trigger was the demo bank sign-in in Study 19
+(GIFbank), since removed. The heuristic reads appearance, not behaviour, and a
+brand-styled header with a sign-in label adds to the signal even when the
+label does nothing, so every study drops whatever looks like signing in or
+collecting personal data.
+
+**What changed here**
+- The header's personal tools no longer list Create account and Log in
+  (`src/lib/Page.tsx`). Donate stays, plain text that leads nowhere.
+
+**Never bring back**
+- A sign-in, log-in, sign-up or create-account control or label, in the
+  header or anywhere else, even as plain text for show.
+- A user name, password or verification field, or an input that autofills
+  personal data (`autoComplete` of `email`, `name`, `given-name`,
+  `family-name`, `tel`, `street-address`, `postal-code` or `cc-*`). The only
+  form here is the search. A field that must take an email carries
+  `autoComplete="off"`, sends nothing and says so.
+- A link to a real login or account page, Wikipedia's or anyone else's.
